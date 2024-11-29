@@ -1,0 +1,36 @@
+import os
+import tkinter as tk
+from tkinter import filedialog, messagebox
+
+# Função para renomear as imagens
+def rename_images():
+    # Abrir caixa de diálogo para selecionar arquivos
+    files = filedialog.askopenfilenames(title="Selecione as imagens", filetypes=[("Imagens", "*.jpg;*.jpeg;*.png;*.gif")])
+
+    if not files:
+        messagebox.showwarning("Aviso", "Nenhuma imagem selecionada!")
+        return
+
+    # Renomear os arquivos selecionados
+    for file in files:
+        directory, filename = os.path.split(file)
+        new_filename = filename.replace(" ", "_")  # Substitui espaços por underscores
+        new_file_path = os.path.join(directory, new_filename)
+
+        # Verifica se o novo nome é diferente e renomeia
+        if new_filename != filename:
+            os.rename(file, new_file_path)
+
+    messagebox.showinfo("Concluído", "Imagens renomeadas com sucesso!")
+
+# Configuração da janela principal
+root = tk.Tk()
+root.title("Renomear Imagens")
+root.geometry("400x200")
+
+# Botão para renomear as imagens
+rename_button = tk.Button(root, text="Selecionar Imagens e Renomear", command=rename_images, padx=10, pady=10)
+rename_button.pack(expand=True)
+
+# Inicia a interface gráfica
+root.mainloop()

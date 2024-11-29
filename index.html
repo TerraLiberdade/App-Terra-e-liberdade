@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooperativa Irmã Alberta</title>
+    <style>
+        /* Estilo geral */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #fff;
+            color: #333;
+        }
+
+        /* Cabeçalho */
+        .header {
+            background-color: #C1272D; /* Vermelho forte */
+            color: #FFF;
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 2rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: rgba(255, 255, 255, 0.85); /* Fundo branco com opacidade */
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .form-container label {
+            font-size: 1.1rem;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-container input {
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 80%;
+            max-width: 400px;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .btn-save {
+            padding: 0.75rem 1.5rem;
+            background-color: #C1272D; /* Vermelho */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn-save:hover {
+            background-color: #B71C1C;
+            transform: scale(1.05);
+        }
+
+        /* Produtos */
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .product {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background-color: #FFF;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            cursor: pointer;
+        }
+
+        .product img {
+            width: 130px;
+            height: 130px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product:hover img {
+            transform: scale(1.05);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .product:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .product label {
+            font-size: 1rem;
+            margin-top: 10px;
+            color: #555;
+        }
+
+        .product input[type="number"] {
+            margin-top: 5px;
+            padding: 0.5rem;
+            width: 60px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .product img {
+                width: 100px;
+                height: 100px;
+            }
+
+            .form-container input {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .form-container input {
+                width: 100%;
+            }
+
+            .product img {
+                width: 80px;
+                height: 80px;
+            }
+        }
+
+        /* Rodapé */
+        .footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #333;
+            color: white;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+        }
+
+        /* Simbolo no canto */
+        .symbol {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: auto;
+            width: 30px; /* Ícone pequeno */
+            background-color: #C1272D; /* Cor vermelha */
+            border-radius: 5px;
+            z-index: 10;
+            opacity: 0.7;
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Simbolo pequeno no canto -->
+    <div class="symbol"></div>
+
+    <div class="header">
+        Bem-vindo à Cooperativa Irmã Alberta
+    </div>
+
+    <div class="container">
+        <div class="form-container">
+            <label for="name">Digite seu nome:</label>
+            <input type="text" id="name" placeholder="Seu nome">
+            <button class="btn-save" onclick="saveSelection()">Salvar Seleção</button>
+        </div>
+
+        <div class="products" id="products">
+            <!-- Produtos renderizados dinamicamente -->
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2024 Cooperativa Irmã Alberta. Produto desenvolvido na matéria Práticas Comunitárias em Campo da Universidade Federal do ABC.
+    </div>
+
+    <!-- Script externo -->
+    <script src="script.js"></script>
+</body>
+</html>
