@@ -36,7 +36,6 @@
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         }
 
-        /* Formulário para inserir nome e salvar seleção */
         .form-container {
             margin-bottom: 2rem;
             text-align: center;
@@ -74,30 +73,6 @@
         .btn-save:hover {
             background-color: #B71C1C;
             transform: scale(1.05);
-        }
-
-        /* Caixa de pesquisa */
-        .search-container {
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-
-        .search-container label {
-            font-size: 1.1rem;
-            font-weight: bold;
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-
-        .search-container input {
-            padding: 0.8rem;
-            margin-bottom: 1rem;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            width: 80%;
-            max-width: 400px;
-            font-size: 1rem;
-            color: #555;
         }
 
         /* Produtos */
@@ -163,14 +138,12 @@
                 height: 100px;
             }
 
-            .search-container input,
             .form-container input {
                 width: 90%;
             }
         }
 
         @media (max-width: 480px) {
-            .search-container input,
             .form-container input {
                 width: 100%;
             }
@@ -217,22 +190,14 @@
     </div>
 
     <div class="container">
-        <!-- Formulário para nome e salvar seleção -->
         <div class="form-container">
             <label for="name">Digite seu nome:</label>
             <input type="text" id="name" placeholder="Seu nome">
             <button class="btn-save" onclick="saveSelection()">Salvar Seleção</button>
         </div>
 
-        <!-- Caixa de pesquisa -->
-        <div class="search-container">
-            <label for="search">Pesquisar Produtos:</label>
-            <input type="text" id="search" placeholder="Digite o nome do produto..." oninput="filterProducts()">
-        </div>
-
-        <!-- Produtos renderizados dinamicamente -->
         <div class="products" id="products">
-            <!-- Produtos renderizados dinamicamente pelo script.js -->
+            <!-- Produtos renderizados dinamicamente -->
         </div>
     </div>
 
@@ -242,38 +207,5 @@
 
     <!-- Script externo -->
     <script src="script.js"></script>
-
-    <script>
-        // Função para filtrar os produtos com base na pesquisa
-        function filterProducts() {
-            const searchInput = document.getElementById("search").value.toLowerCase();
-            const products = Array.from(document.querySelectorAll(".product"));
-            
-            // Filtra produtos que correspondem à pesquisa
-            const filteredProducts = products.filter(product => {
-                const productName = product.querySelector("label").textContent.toLowerCase();
-                return productName.includes(searchInput);
-            });
-
-            // Atualiza a lista de produtos filtrados na tela
-            const productsContainer = document.getElementById("products");
-            productsContainer.innerHTML = '';
-            filteredProducts.forEach(product => {
-                productsContainer.appendChild(product);
-            });
-        }
-
-        // Função para salvar a seleção com nome
-        function saveSelection() {
-            const name = document.getElementById("name").value;
-            if (name.trim() === "") {
-                alert("Por favor, digite seu nome.");
-                return;
-            }
-            localStorage.setItem("userName", name);
-            alert("Seleção salva! Bem-vindo, " + name + "!");
-        }
-    </script>
-
 </body>
 </html>
