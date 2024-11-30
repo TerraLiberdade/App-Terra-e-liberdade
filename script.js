@@ -1,19 +1,19 @@
 const products = [
-    "Abacate", "Abacatinho", "Abacaxi", "Abacaxi_pequeno", "Acelga", "Acerola", "Agrião", "Alecrim", "Alface_crespa",
-    "Alface_frise", "Alface_lisa", "Alface_mimosa", "Alface_repolhuda", "Alface_romana", "Alface_roxa", "Alho_poró_grosso",
-    "Almeirão_liso", "Almeirão_pão_de_açúcar", "Ameixa_Rubimel", "Amora", "Arruda", "Aspargos", "Azedinha", "Babosa",
-    "Banana", "Banana_nanica", "Banana_pão", "Banana_prata", "Boldo", "Boldo_chile", "Brocolis", "Brocolis_ramoso",
-    "Camomila_flor", "Cana_de_açúcar", "Capim_santo", "Capuchinha", "Carambola", "Catalonia", "Caqui",
-    "Caqui_rama_forte", "Cebolinha", "Chaya", "Citronela", "Coentro", "Coentro_do_pará", "Couve",
-    "Couve_flor", "Escarola", "Erva_Santa_Maria", "Erva_cidreira", "Erva_doce_folha", "Espinafre", "Folha_de_canela",
-    "Folha_de_uva", "Graviola", "Guaco", "Hibisco", "Hortelã", "Jabuticaba", "Jaca_mole_madura", "Jaca_verde",
-    "Jambu", "Laranja", "Laranja_azeda_para_doce", "Laranja_bahia", "Lavanda_flor", "Lichia", "Lima_da_pérsia",
-    "Limão_rosa", "Limão_siciliano", "Limão_tahiti", "Louro", "Mamão_verde", "Manga", "Manga_coquinho",
-    "Manjericão", "Mandioca_Amarela", "Mandioca_Branca", "Maracujá", "Maxixe", "Mexerica", "Menta",
-    "Morango", "Mostarda", "Ora_pro_nobis", "Orégano", "Peixinho", "Pepino_caipira", "Pepino_japones",
-    "Pêssego", "Pitanga", "Pitaya", "Poejo", "Quincam", "Repolho", "Repolho_baby", "Romã",
-    "Rúcula", "Salsão_bulbo", "Salsão_folha", "Salsinha", "Seriguela", "Taioba", "Tomate_cereja",
-    "Tomate_verde", "Tomilho", "Uva_níagara", "Vagem"
+  "Abacate", "Abacatinho", "Abóbora", "Abobrinha", "Abobrinha_Bolinha", "Abacaxi", "Abacaxi_pequeno", "Acelga", "Acerola", 
+"Agrião", "Alecrim", "Alface_Americana", "Alface_crespa", "Alface_frise", "Alface_lisa", "Alface_mimosa", "Alface_repolhuda", 
+"Alface_romana", "Alface_roxa", "Alho_poró_grosso", "Almeirão_liso", "Almeirão_pão_de_açúcar", "Amendoim", "Amendoim_com_casca", 
+"Ameixa_Rubimel", "Amora", "Arruda", "Aspargos", "Azedinha", "Babosa", "Banana", "Banana_nanica", "Banana_pão", "Banana_prata", 
+"Boldo", "Boldo_chile", "Berinjela", "Brocolis", "Brocolis_ramoso", "Camomila_flor", "Cana_de_açúcar", "Capim_santo", "Capuchinha", 
+"Carambola", "Catalonia", "Caqui", "Caqui_rama_forte", "Cebola", "Cebolinha", "Chaya", "Chuchu", "Citronela", "Coentro", 
+"Coentro_do_pará", "Couve", "Couve_flor", "Edamame", "Escarola", "Erva_Santa_Maria", "Erva_cidreira", "Erva_doce_folha", 
+"Espinafre", "Fava", "Feijão_Andu", "Feijão_Carioca", "Feijão_Corda", "Folha_de_canela", "Folha_de_uva", "Graviola", "Guaco", 
+"Hibisco", "Hortelã", "Inhame", "Jabuticaba", "Jaca_mole_madura", "Jaca_verde", "Jambu", "Jiló", "Laranja", "Laranja_azeda_para_doce", 
+"Laranja_bahia", "Lavanda_flor", "Lichia", "Lima_da_pérsia", "Limão_rosa", "Limão_siciliano", "Limão_tahiti", "Louro", "Mamão_verde", 
+"Manga", "Manga_coquinho", "Manjericão", "Mandioquinha", "Mandioca_Amarela", "Mandioca_Branca", "Maracujá", "Maxixe", "Mexerica", 
+"Menta", "Milho", "Morango", "Mostarda", "Ora_pro_nobis", "Orégano", "Peixinho", "Pepino_caipira", "Pepino_japones", "Pêssego", 
+"Pitanga", "Pitaya", "Pimenta", "Pimenta_biquinho", "Pimenta_cambuci", "Pimenta_dedo_de_moça", "Pimentão", "Poejo", "Quincam", 
+"Quiabo", "Rabanete", "Repolho", "Repolho_baby", "Romã", "Rúcula", "Salsão_bulbo", "Salsão_folha", "Salsinha", "Seriguela", 
+"Taioba", "Tomate_cereja", "Tomate_verde", "Tomilho", "Uva_níagara", "Vagem"
   ];
   
   // Função para carregar imagens dos produtos
