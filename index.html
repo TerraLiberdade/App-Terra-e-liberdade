@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cooperativa Irmã Alberta</title>
 
-    <!-- Adicionando a linha para carregar a fonte 'Roboto' -->
+    <!-- Fonte 'Roboto' -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
     <style>
@@ -22,8 +22,8 @@
             background-color: #C1272D; /* Vermelho forte */
             color: #FFF;
             text-align: center;
-            padding: 1.5rem;
-            font-size: 2rem;
+            padding: 1rem;
+            font-size: 1.6rem;
             font-weight: bold;
             letter-spacing: 2px;
             text-transform: uppercase;
@@ -32,38 +32,38 @@
 
         /* Container principal */
         .container {
-            max-width: 1200px;
+            max-width: 100%;
             margin: 0 auto;
-            padding: 2rem;
-            background-color: rgba(255, 255, 255, 0.85); /* Fundo branco com opacidade */
+            padding: 1.5rem;
+            background-color: rgba(255, 255, 255, 0.85);
             border-radius: 10px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         }
 
-        .form-container {
-            margin-bottom: 2rem;
+        .form-container, .search-container {
+            margin-bottom: 1.5rem;
             text-align: center;
         }
 
-        .form-container label {
+        .form-container label, .search-container label {
             font-size: 1.1rem;
             font-weight: bold;
             display: block;
             margin-bottom: 0.5rem;
         }
 
-        .form-container input {
+        .form-container input, .search-container input {
             padding: 0.8rem;
             margin-bottom: 1rem;
             border: 1px solid #ccc;
             border-radius: 4px;
-            width: 80%;
+            width: 100%;
             max-width: 400px;
             font-size: 1rem;
             color: #555;
         }
 
-        .btn-save {
+        .btn-save, .btn-clear {
             padding: 0.75rem 1.5rem;
             background-color: #C1272D; /* Vermelho */
             color: white;
@@ -74,49 +74,8 @@
             transition: background-color 0.3s ease, transform 0.2s ease;
         }
 
-        .btn-save:hover {
+        .btn-save:hover, .btn-clear:hover {
             background-color: #B71C1C;
-            transform: scale(1.05);
-        }
-
-        /* Caixa de pesquisa */
-        .search-container {
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-
-        .search-container label {
-            font-size: 1.1rem;
-            font-weight: bold;
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-
-        .search-container input {
-            padding: 0.8rem;
-            margin-bottom: 1rem;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            width: 80%;
-            max-width: 400px;
-            font-size: 1rem;
-            color: #555;
-        }
-
-        .btn-clear {
-            padding: 0.75rem 1.5rem;
-            background-color: #8e8e8e; /* Cor cinza */
-            color: white;
-            border: none;
-            border-radius: 4px;
-            font-size: 1.1rem;
-            cursor: pointer;
-            margin-left: 10px;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-
-        .btn-clear:hover {
-            background-color: #6e6e6e;
             transform: scale(1.05);
         }
 
@@ -171,7 +130,7 @@
         .product input[type="number"] {
             margin-top: 5px;
             padding: 0.5rem;
-            width: 60px; /* Tamanho ajustado */
+            width: 60px;
             border: 1px solid #ccc;
             border-radius: 4px;
             text-align: center;
@@ -179,24 +138,42 @@
 
         /* Responsividade */
         @media (max-width: 768px) {
+            .header {
+                font-size: 1.4rem;
+                padding: 1rem;
+            }
+
+            .form-container input, .search-container input {
+                width: 100%;
+            }
+
             .product img {
                 width: 100px;
                 height: 100px;
             }
 
-            .form-container input {
-                width: 90%;
+            .products {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            }
+
+            .btn-save, .btn-clear {
+                font-size: 1rem;
             }
         }
 
         @media (max-width: 480px) {
-            .form-container input {
-                width: 100%;
+            .header {
+                font-size: 1.2rem;
             }
 
             .product img {
                 width: 80px;
                 height: 80px;
+            }
+
+            .btn-save, .btn-clear {
+                padding: 0.7rem 1.2rem;
+                font-size: 1rem;
             }
         }
 
@@ -216,8 +193,8 @@
             top: 0;
             left: 0;
             height: auto;
-            width: 30px; /* Ícone pequeno */
-            background-color: #C1272D; /* Cor vermelha */
+            width: 30px;
+            background-color: #C1272D;
             border-radius: 5px;
             z-index: 10;
             opacity: 0.7;
