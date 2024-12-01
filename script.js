@@ -44,7 +44,7 @@ function loadProductImages() {
       quantityInput.type = 'number';
       quantityInput.name = `${product}_quantity`;
       quantityInput.min = 1; // Garantir que a quantidade mínima seja 1
-      quantityInput.value = 1; // Valor inicial da quantidade
+      quantityInput.value = 0; // Valor inicial da quantidade
 
       productDiv.appendChild(label);
       productDiv.appendChild(checkbox);
